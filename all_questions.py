@@ -27,7 +27,7 @@ def question1():
     level1["smoking_info_gain"] = 0.278
 
     level1["cough"] = -1
-    level1["cough_info_gain"] = 0.035
+    level1["cough_info_gain"] = 0.0348
 
     level1["radon"] = -1
     level1["radon_info_gain"] = 0.236
@@ -64,9 +64,9 @@ def question1():
 
     # Fill up `construct_tree``
     # tree, training_error = construct_tree()
-    tree = u.BinaryTree("smoking == Yes")  # MUST STILL CREATE THE TREE *****
-    A = tree.insert_left("cough == Yes")
-    B = tree.insert_right("radon == Yes")
+    tree = u.BinaryTree("smoking")  # MUST STILL CREATE THE TREE *****
+    A = tree.insert_left("cough")
+    B = tree.insert_right("radon")
     A.insert_left("y") 
     A.insert_right("n") 
     B.insert_left("y") 
@@ -113,7 +113,7 @@ def question2():
     E.insert_left("A")
     E.insert_right("C")
 
-    answer["(d) attribute"] = tree
+    answer["(d) full decision tree"] = tree
 
     return answer
 
@@ -267,7 +267,7 @@ def question7():
     answer = {}
 
     # float
-    answer["a, info gain, ID"] = 1
+    answer["a, info gain, ID"] = 1.0
     answer["b, info gain, Handedness"] = 0.531
 
     # string: "ID" or "Handedness"
