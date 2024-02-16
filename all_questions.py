@@ -19,7 +19,7 @@ def question1():
     """
     answer = False
     answer = {}
-    level1 = {'smoking'}
+    level1 = {}
     level2_left = {}
     level2_right = {}
 
